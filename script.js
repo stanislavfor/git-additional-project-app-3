@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultParagraph = document.getElementById("resultParagraph");
     const charsStatsContainer = document.getElementById("charsStatsContainer");
     const charsStatsList = document.getElementById("charsStatsList");
-
+    const wordsStatsContainer = document.getElementById("statsContainer");
+    const wordsStatsList = document.getElementById("statsList");
 
     // Обработчик события клика на кнопку "Очистить"
     clearButton.addEventListener("click", function () {
@@ -15,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
         charsStatsContainer.style.display = "none";
         while (charsStatsList.firstChild) {
             charsStatsList.removeChild(charsStatsList.firstChild);
+        }
+        while (statsList.firstChild) {
+            statsList.removeChild(statsList.firstChild);
         }
     });
 
@@ -74,6 +78,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+
+    // Функция для подсчёта повторяемости слов
+    function getWordFrequency(text) {
+        let words = text.trim().toLowerCase().split(/\s+/).filter((word) => word !== "");
+        let frequencyMap = new Map();
+        for (let word of words) {
+            if (frequencyMap.has(word)) {
+                frequencyMap.set(word, frequencyMap.get(word) + 1);
+            } else {
+                frequencyMap.set(word, 1);
+            }
+        }
+        return frequencyMap;
+    }
+
+    // Обработчик события клика на кнопку повторяемости слов
+    statsButton.addEventListener("click", function () {
+        let text = inputText.value;
+        let frequencyMap = getWordFrequency(text);
+        if (frequencyMap.size > 0) {
+            statsContainer.style.display = "block"; // Показываем блок статистики
+            statsList.innerHTML = ""; // Очищаем предыдущий список
+            const messageLi = document.createElement("li");
+            messageLi.style.fontWeight = 'bold';
+            messageLi.textContent = "Количество повторений слов :";
+            statsList.appendChild(messageLi);
+            // Формируем элементы списка для каждой записи в карте частот
+            for (let [word, count] of frequencyMap.entries()) {
+                let listItem = document.createElement("li");
+                listItem.textContent = `${word} — ${count}`;
+                statsList.appendChild(listItem);
+            }
+        } else {
+            // Добавляем сообщение в список
+            statsContainer.style.display = "block";
+            const messageLi = document.createElement("li");
+            messageLi.textContent = "Нет слов для анализа!";
+            statsList.appendChild(messageLi);
+        }
+    });
 
 
 
