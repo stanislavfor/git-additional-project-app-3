@@ -53,3 +53,18 @@ button {
     margin-top: 20px;
     font-weight: bold;
 }
+
+/* --- Контейнер для статистики знаков */
+#charsStatsContainer {
+    display: none; /* Изначально скрываем блоки статистики */
+    margin-top: 20px;
+}
+
+#charsStatsList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#charsStatsList li {
+    margin-bottom: 5px;
+}
