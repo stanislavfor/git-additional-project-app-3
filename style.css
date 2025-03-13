@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 99%;
+    height: 200px;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#countButton {
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+#countButton:hover {
+    background-color: #0056b3;
+}
+
+#clearButton {
+    float: left;
+    margin-right: 20px;
+    background-color: #FF0032;
+    transition: background-color 0.3s ease;
+}
+
+#clearButton:hover {
+    background-color: #9B001C;
+}
+
+#resultParagraph {
+    margin-top: 20px;
+    font-weight: bold;
+}
