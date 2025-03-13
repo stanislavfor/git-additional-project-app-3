@@ -29,12 +29,12 @@ button {
     color: white;
 }
 
-#countButton {
+#countButton, #statsButton, #charCountButton {
     background-color: #007bff;
     transition: background-color 0.3s ease;
 }
 
-#countButton:hover {
+#countButton:hover, #statsButton:hover, #charCountButton:hover {
     background-color: #0056b3;
 }
 
@@ -55,16 +55,34 @@ button {
 }
 
 /* --- Контейнер для статистики знаков */
+#wordsStatsContainer,
 #charsStatsContainer {
     display: none; /* Изначально скрываем блоки статистики */
     margin-top: 20px;
 }
 
+#wordsStatsList,
 #charsStatsList {
     list-style-type: none;
     padding-left: 0;
 }
 
+#wordsStatsList li,
 #charsStatsList li {
+    margin-bottom: 5px;
+}
+
+/* --- Контейнер для статистики слов  */
+#statsContainer {
+    display: none; /* Изначально скрываем блок статистики */
+    margin-top: 20px;
+}
+
+#statsList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#statsList li {
     margin-bottom: 5px;
 }
