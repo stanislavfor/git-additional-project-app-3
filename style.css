@@ -17,6 +17,8 @@ body {
     margin-bottom: 20px;
     background-color: #ffffff;
     border-radius: 10px;
+    border: 9px solid #F0F0F0;
+    transition: border 0.5s ease;
 }
 
 .logo img {
