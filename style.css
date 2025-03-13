@@ -39,8 +39,8 @@ button {
 }
 
 #clearButton {
-    float: left;
-    margin-right: 20px;
+    /*float: left;*/
+    /*margin-right: 20px;*/
     background-color: #FF0032;
     transition: background-color 0.3s ease;
 }
@@ -85,4 +85,40 @@ button {
 
 #statsList li {
     margin-bottom: 5px;
+}
+
+/* Стиль для общего контейнера кнопки "Очистить" */
+.cleanButton {
+    display: inline-block;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 12px solid white;
+}
+
+/* Убираем отступы и рамки у отдельной кнопки */
+.cleanButton button {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Стиль для общего контейнера кнопок */
+.buttons {
+    display: inline-block;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 12px solid #F0F0F0;
+}
+
+/* Убираем отступы и рамки у отдельных кнопок */
+.buttons button {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
