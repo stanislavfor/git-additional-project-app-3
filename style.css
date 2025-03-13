@@ -21,6 +21,11 @@ body {
     transition: border 0.5s ease;
 }
 
+.logo:hover {
+    background-color: #F0F0F0;
+    border: 9px solid #007bff;
+}
+
 .logo img {
     height: 35px;
     margin-right: 10px;
