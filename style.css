@@ -15,14 +15,16 @@ body {
 .logo {
     display: inline-block;
     margin-bottom: 20px;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: #F0F0F0;
     border-radius: 10px;
     border: 9px solid #F0F0F0;
     transition: border 0.5s ease;
 }
 
 .logo:hover {
-    background-color: #F0F0F0;
+    /*background-color: #F0F0F0;*/
+    background-color: #ffffff;
     border: 9px solid #007bff;
 }
 
@@ -117,7 +119,8 @@ button {
 .cleanButton {
     display: inline-block;
     padding: 20px;
-    background-color: white;
+    /*background-color: white;*/
+    background-color: grey;
     border-radius: 10px;
     border: 12px solid white;
 }
@@ -135,7 +138,8 @@ button {
 .buttons {
     display: inline-block;
     padding: 20px;
-    background-color: white;
+    /*background-color: white;*/
+    background-color: grey;
     border-radius: 10px;
     border: 12px solid #F0F0F0;
 }
